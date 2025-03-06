@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Service - Register</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="assets/css/register.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/images/logo-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="container-header">
+                <div class="container-logo">
+                    <div class="imag-logo">
+                        <img src="assets/images/logo-removebg-preview.png" alt="Local Service logo">
+                    </div>
+                    <div class="text-logo">
+                        <span>Local</span>
+                        <span>Service</span>
+                    </div>
+                </div>
+
+                <div class="container-user">
+                    <div class="username">
+                        <p>nada eraky</p>
+                    </div>
+                    <div class="image-user">
+                        <img src="assets/images/plumping/user.jpeg" alt="User profile image">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <section>
+            <div class="container-section">
+                <div class="title">
+                    <h1><span>Register</span> personal data</h1>
+                </div>
+
+                <div class="content-wrapper">
+                    <!-- Registration Form -->
+                    <div class="form-wrapper">
+                        <form action="#" method="post">
+                            <div class="form">
+                                <div class="form-group full-width">
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" name="full_name" id="name" required>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="form-part1">
+                                        <div class="form-group">
+                                            <label for="email">Email (optional):</label>
+                                            <input type="email" name="email" id="email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="address">Address:</label>
+                                            <input type="text" name="address" id="address" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="service_provider">Service Provider:</label>
+                                            <select name="service_provider" id="service_provider" required>
+                                                <option value="" selected disabled>Select service provider</option>
+                                                <option value="2">استبدال الصنبور</option>
+                                                <option value="3">تسليك المصرف</option>
+                                                <option value="4">تركيب حوض جديد</option>
+                                                <option value="5">فحص الانابيب</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-part2">
+                                        <div class="form-group">
+                                            <label for="mobile">Mobile:</label>
+                                            <input type="tel" name="mobile" id="mobile" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="area">Area:</label>
+                                            <select name="area" id="area" required>
+                                                <option value="" selected disabled>Select area</option>
+                                                <option value="2">حي المناخ</option>
+                                                <option value="3">حي الزهور</option>
+                                                <option value="4">حي التلاتيني</option>
+                                                <option value="5">حي الجنوب</option>
+                                                <option value="6">حي شرق بورسعيد</option>
+                                                <option value="7">حي الضواحي</option>
+                                                <option value="8">حي غرب</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="day">Select the execution day:</label>
+                                            <input type="date" name="day" id="day" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="register">
+                                    <button type="submit" class="btn">Request Now <i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Card -->
+                    <div class="summary-wrapper">
+                        <div class="card">
+                            <div class="head-card">
+                                <h3>Summary of your order</h3>
+                            </div>
+
+                            <div class="body-card">
+                                <p><span>Service:</span>Plumbing Service</p>
+                                <p><span>Type:</span>Fix a Leak</p>
+                                <p><span>Price:</span>$50-$100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
