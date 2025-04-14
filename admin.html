@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <!-- icon -->
+    <link rel="icon" href="assets/images/logo-removebg-preview.png" type="image/png">
+    <!-- Assuming path, adjust if needed -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1 class="admin-title">Admin Dashboard</h1>
+
+        <!-- Stats Overview Section -->
+        <section class="stats-overview">
+            <div class="stat-card">
+                <div class="card-header">
+                    <h3 class="card-title">Accepted Orders</h3>
+                </div>
+                <div class="card-content">
+                    <p class="total">245</p>
+                    <span class="separator">|</span>
+                    <p class="report">Impression -20%</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="card-header">
+                    <h3 class="card-title">In Process Orders</h3>
+                </div>
+                <div class="card-content">
+                    <p class="total">645</p>
+                    <span class="separator">|</span>
+                    <p class="report">Impression -55%</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="card-header">
+                    <h3 class="card-title">Failed Orders</h3>
+                </div>
+                <div class="card-content">
+                    <p class="total">145</p>
+                    <span class="separator">|</span>
+                    <p class="report">Impression -11%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orders Table Section -->
+        <section class="orders-section">
+            <h2>Recent Orders</h2>
+            <div class="orders-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Service Type</th>
+                            <th>Date</th>
+                            <th>Provider</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#C-123</td>
+                            <td>Plumbing Service</td>
+                            <td>12-03-2025</td>
+                            <td>Ahmed Ali</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-673</td>
+                            <td>Electrical Service</td>
+                            <td>15-03-2025</td>
+                            <td>Mohamed Ali</td>
+                            <td><span class="status Failed">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-158</td>
+                            <td>Appliance Service</td>
+                            <td>16-03-2025</td>
+                            <td>Nabel Mohsen</td>
+                            <td><span class="status InProcess">In Process</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-943</td>
+                            <td>Electrical Service</td>
+                            <td>18-03-2025</td>
+                            <td>Kareem Salem</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-467</td>
+                            <td>Carpentry Service</td>
+                            <td>21-03-2025</td>
+                            <td>Amr Abdo</td>
+                            <td><span class="status Failed">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-576</td>
+                            <td>Painting Service</td>
+                            <td>28-03-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <!-- Added more rows for scroll testing -->
+                        <tr>
+                            <td>#C-577</td>
+                            <td>Painting Service</td>
+                            <td>29-03-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-468</td>
+                            <td>Carpentry Service</td>
+                            <td>22-03-2025</td>
+                            <td>Amr Abdo</td>
+                            <td><span class="status Failed">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-578</td>
+                            <td>Painting Service</td>
+                            <td>30-03-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-579</td>
+                            <td>Painting Service</td>
+                            <td>31-03-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-580</td>
+                            <td>Painting Service</td>
+                            <td>01-04-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Failed">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-581</td>
+                            <td>Painting Service</td>
+                            <td>02-04-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Failed">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-582</td>
+                            <td>Painting Service</td>
+                            <td>03-04-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-583</td>
+                            <td>Painting Service</td>
+                            <td>04-04-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status InProcess">In Process</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-124</td>
+                            <td>Plumbing Service</td>
+                            <td>13-03-2025</td>
+                            <td>Ahmed Ali</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-584</td>
+                            <td>Painting Service</td>
+                            <td>05-04-2025</td>
+                            <td>Waled Fady</td>
+                            <td><span class="status InProcess">In Process</span></td>
+                        </tr>
+                        <tr>
+                            <td>#C-125</td>
+                            <td>Plumbing Service</td>
+                            <td>14-03-2025</td>
+                            <td>Ahmed Ali</td>
+                            <td><span class="status Accepted">Accepted</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div> <!-- end admin-container -->
+</body>
+
+</html>

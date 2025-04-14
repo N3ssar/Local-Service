@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication - Local Service</title>
+    <!-- Main authentication stylesheet -->
+    <link rel="stylesheet" href="assets/css/auth.css"> <!-- Adjust path if needed -->
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo-removebg-preview.png" type="image/x-icon">
+    <!-- Adjust path if needed -->
+</head>
+
+<body>
+    <!-- Container will have 'active' class added/removed by JS -->
+    <div class="container" id="auth-container">
+
+        <!-- Registration Form -->
+        <div class="form-box register">
+            <form action="#" id="registerForm">
+                <h1>Sign Up</h1>
+                <div class="input-group">
+                    <input type="text" name="name" id="register-name" placeholder="Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="register-email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="register-password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-group">
+                    <input type="tel" name="phone" id="register-phone" placeholder="Phone Number" required>
+                    <i class='bx bxs-phone'></i>
+                </div>
+                <div class="input-group select-group">
+                    <label for="register-area">Primary Category</label>
+                    <select name="area" id="register-area" required>
+                        <option value="" selected disabled>Select primary category</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="carpentry">Carpentry</option>
+                        <option value="painting">Painting</option>
+                        <option value="appliance">Appliance Repair</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group select-group">
+                    <label for="register-role">Your Role</label>
+                    <select name="role" id="register-role" required>
+                        <option value="" selected disabled>Select your role</option>
+                        <option value="customer">Find a Service (Customer)</option>
+                        <option value="provider">Offer a Service (Provider)</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-button">Sign Up</button>
+                <p class="mobile-toggle">Already have an account? <a href="#login" id="mobile-login-link">Log In</a></p>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-box login">
+            <form action="#" id="loginForm">
+                <h1>Log In</h1>
+                <div class="input-group">
+                    <input type="email" name="email" id="login-email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="login-password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <a href="#" class="forgot-password">Forgot Your Password?</a>
+                <button type="submit" class="form-button">Log In</button>
+                <p class="mobile-toggle">Don't have an account? <a href="#register" id="mobile-register-link">Sign
+                        Up</a></p>
+            </form>
+        </div>
+
+        <!-- Toggle/Overlay Container -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <!-- Left Panel (Shows 'Welcome Back!' - Overlay is on the right initially) -->
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all site features</p>
+                    <button class="toggle-button" id="login">Log In</button> <!-- Target for JS -->
+                </div>
+                <!-- Right Panel (Shows 'Hello, Friend!' - Overlay is on the right initially) -->
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all site features</p>
+                    <button class="toggle-button" id="register">Sign Up</button> <!-- Target for JS -->
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End Container -->
+
+    <script src="assets/scripts/auth.js"></script> <!-- Adjust path if needed -->
+</body>
+
+</html>

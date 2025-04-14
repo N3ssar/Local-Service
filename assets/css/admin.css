@@ -1,0 +1,366 @@
+:root {
+    /* Using the provided palette */
+    --color-primary: #254723;
+    /* Dark Green - Main Accent */
+    --color-primary-dark: #2e7d32;
+    /* Medium Green - Secondary Accent / Hover */
+    --color-primary-darker: #1b5e20;
+    /* Darkest Green - Headings / Strong Elements */
+    --color-secondary: #2e4924;
+    /* Muted Green - Text / Less Emphasized Elements */
+    --color-background: #ecf5ec;
+    /* Very Light Green - Main Background */
+    --color-background-lighter: #cef3cd;
+    /* Light Green - Card Backgrounds / Table Headers */
+    --color-background-light: #DBEADE;
+    /* Slightly Darker Light Green - Table Rows */
+    --color-accent-light: #e8f5e9;
+    /* Pale Green - Subtle Backgrounds (if needed) */
+    --color-text: #333;
+    /* Dark Gray - Primary Text */
+    --color-text-light: #555;
+    /* Lighter Gray - Secondary Text */
+    --color-light: #cef3cd;
+    /* Duplicate of background-lighter, keep for compatibility */
+    --color-border: #c5e1c5;
+    /* Soft Green Border Color */
+    --color-success: #2e7d32;
+    /* Green for Success status */
+    --color-danger: #c62828;
+    /* Red for Fail status */
+    --color-warning: #ff8f00;
+    /* Orange/Yellow for InProcess status */
+    --color-white: #fff;
+    /* White for text on dark backgrounds */
+
+    /* Consistent spacing and effects */
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 15px;
+    --border-radius-xl: 20px;
+    --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 6px 15px rgba(0, 0, 0, 0.15);
+    --transition-default: all 0.3s ease;
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Consistent font */
+    /* text-transform: capitalize; */
+    /* Removed global capitalize, apply where needed */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.admin-container {
+    max-width: 1400px;
+    /* Allow wider view for admin */
+    margin: 0 auto;
+    padding: var(--padding-lg) var(--padding-xl);
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: var(--padding-xl);
+    color: var(--color-primary-darker);
+    font-size: 2.5rem;
+    /* Adjusted size */
+    font-weight: 600;
+    text-transform: capitalize;
+    /* Removed animation for cleaner UI */
+}
+
+/* Stats Overview Section (Formerly rating-section) */
+.stats-overview {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-xl);
+    justify-content: center;
+    /* Center cards if they don't fill the row */
+}
+
+.stat-card {
+    background-color: var(--color-background-lighter);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-sm);
+    padding: var(--padding-lg);
+    flex: 1 1 300px;
+    /* Flex grow, shrink, basis (min-width before wrapping) */
+    min-width: 280px;
+    /* Ensure minimum width */
+    /* Removed fixed height */
+    transition: var(--transition-default);
+    border: 1px solid var(--color-border);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.stat-card .card-header {
+    margin-bottom: var(--padding-md);
+}
+
+.stat-card .card-title {
+    font-weight: 600;
+    color: var(--color-secondary);
+    font-size: 1.3rem;
+    /* Adjusted size */
+    text-transform: capitalize;
+    margin: 0;
+    /* Reset default heading margin */
+}
+
+.stat-card .card-content {
+    display: flex;
+    align-items: baseline;
+    /* Align number and text nicely */
+    gap: var(--padding-sm);
+    margin-top: var(--padding-md);
+}
+
+.stat-card .total {
+    color: var(--color-primary-darker);
+    font-size: 2rem;
+    /* Make number prominent */
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-card .separator {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0 0.25rem;
+}
+
+.stat-card .report {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+/* Orders Table Section */
+.orders-section {
+    margin-top: var(--padding-xl);
+    background-color: var(--color-white);
+    /* Give table a white background */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-sm);
+    overflow: hidden;
+    /* Needed for border-radius on container */
+    border: 1px solid var(--color-border);
+}
+
+.orders-section h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary-darker);
+    padding: var(--padding-lg);
+    margin: 0;
+    border-bottom: 1px solid var(--color-border);
+    text-transform: capitalize;
+}
+
+.orders-table-container {
+    overflow-x: auto;
+    /* Enable horizontal scrolling on small screens */
+    padding: 0 var(--padding-lg) var(--padding-lg);
+    /* Add padding around table */
+    margin-top: var(--padding-md);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Clean look */
+    min-width: 800px;
+    /* Minimum width before scrollbar appears */
+}
+
+th,
+td {
+    padding: var(--padding-md);
+    text-align: left;
+    /* More common for tables */
+    border-bottom: 1px solid var(--color-border);
+    /* Separator lines */
+    vertical-align: middle;
+    /* Align content vertically */
+    white-space: nowrap;
+    /* Prevent text wrapping in cells initially */
+    /* Removed fixed width */
+    text-transform: capitalize;
+}
+
+th {
+    background-color: var(--color-accent-light);
+    /* Subtle header background */
+    color: var(--color-primary-darker);
+    font-size: 1rem;
+    /* Adjusted size */
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Common for table headers */
+    letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+    background-color: var(--color-background);
+    /* Hover effect */
+}
+
+td {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+td:first-child,
+th:first-child {
+    padding-left: var(--padding-lg);
+    /* Extra padding for first column */
+}
+
+td:last-child,
+th:last-child {
+    padding-right: var(--padding-lg);
+    /* Extra padding for last column */
+}
+
+/* Status Badge Styles */
+.status {
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius-xl);
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+    /* Allows padding and border-radius */
+    text-align: center;
+    min-width: 90px;
+    /* Ensure badges have some width */
+    border: 1px solid transparent;
+}
+
+.status.Accepted {
+    color: var(--color-success);
+    background-color: #e8f5e9;
+    /* Light green background */
+    border-color: #a5d6a7;
+    /* Slightly darker green border */
+}
+
+.status.Failed {
+    color: var(--color-danger);
+    background-color: #ffebee;
+    /* Light red background */
+    border-color: #ef9a9a;
+    /* Slightly darker red border */
+}
+
+.status.InProcess {
+    color: var(--color-warning);
+    background-color: #fff8e1;
+    /* Light yellow background */
+    border-color: #ffe082;
+    /* Slightly darker yellow border */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .admin-container {
+        padding: var(--padding-lg);
+    }
+
+    .admin-title {
+        font-size: 2.2rem;
+    }
+
+    .stat-card {
+        flex-basis: calc(50% - var(--padding-lg) / 2);
+        /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-title {
+        font-size: 2rem;
+    }
+
+    /* Table cells have slightly less padding */
+    th,
+    td {
+        padding: var(--padding-sm) var(--padding-md);
+    }
+
+    .stat-card .total {
+        font-size: 1.8rem;
+    }
+
+    .stat-card .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-container {
+        padding: var(--padding-md);
+    }
+
+    .stat-card {
+        flex-basis: 100%;
+        /* One card per row */
+    }
+
+    .admin-title {
+        font-size: 1.8rem;
+    }
+
+    .orders-section h2 {
+        font-size: 1.5rem;
+        padding: var(--padding-md);
+    }
+
+    th,
+    td {
+        font-size: 0.9rem;
+        /* Smaller font on very small screens */
+        white-space: normal;
+        /* Allow text wrapping if absolutely necessary */
+    }
+
+    .status {
+        font-size: 0.8rem;
+        padding: calc(var(--padding-sm) - 2px) calc(var(--padding-md) - 4px);
+        min-width: 80px;
+    }
+
+    td:first-child,
+    th:first-child {
+        padding-left: var(--padding-md);
+    }
+
+    td:last-child,
+    th:last-child {
+        padding-right: var(--padding-md);
+    }
+}

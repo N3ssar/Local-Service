@@ -1,0 +1,522 @@
+/* Start Global Styles & Variables */
+:root {
+    --color-primary: #4caf50;
+    --color-primary-dark: #2e7d32;
+    --color-primary-darker: #1b5e20;
+    --color-secondary: #455c3c;
+    --color-background: #fff;
+    --color-background-light: #f8faf8;
+    --color-accent-light: #e8f5e9;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-text-on-dark: #f0f0f0;
+    --color-border: #ccc;
+    --color-border-focus: var(--color-primary-dark);
+    --color-input-background: #eee;
+
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 20px;
+
+    --box-shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+    --transition-duration: 0.6s;
+    --transition-timing: ease-in-out;
+
+    --font-family-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+}
+
+body {
+    background-color: var(--color-background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* End Global Styles & Variables */
+
+
+/* Start Main Container Styles */
+.container {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 850px;
+    /* Consistent width */
+    min-height: 600px;
+    /* Increased height to prevent button overlap */
+}
+
+/* End Main Container Styles */
+
+
+/* Start Form Box Styles */
+.form-box {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center form content vertically */
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.form-box form {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items within form */
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.form-box h1 {
+    color: var(--color-primary-darker);
+    margin-bottom: 1rem;
+    /* Space below title */
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    /* Center title */
+}
+
+.input-group {
+    position: relative;
+    background-color: var(--color-input-background);
+    border: none;
+    border-radius: var(--border-radius-md);
+    margin: 8px 0;
+    /* Adjusted margin */
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-group.select-group {
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    /* Add a bit more space for select groups */
+}
+
+.input-group.select-group label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    /* Slightly less margin */
+    color: var(--color-secondary);
+    font-size: 0.85rem;
+    /* Slightly smaller label */
+    display: block;
+    padding-left: 5px;
+    /* Small indent */
+}
+
+.input-group.select-group select {
+    background-color: var(--color-input-background);
+    border-radius: var(--border-radius-md);
+    border: none;
+    padding: 13px 15px;
+    /* Adjust padding to match inputs */
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.input-group input,
+.input-group select {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 13px 15px 13px 45px;
+    /* Adjusted padding for consistency */
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    border-radius: var(--border-radius-md);
+}
+
+.input-group select {
+    color: var(--color-text-light);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.8em;
+    /* Smaller arrow */
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+.input-group select:valid {
+    color: var(--color-text);
+}
+
+.input-group select option {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.input-group input::placeholder {
+    color: var(--color-text-light);
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.forgot-password {
+    color: var(--color-secondary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin: 12px 0 15px;
+    /* Adjusted margin */
+    align-self: flex-end;
+    /* Align to the right */
+    padding-right: 5px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-button {
+    background-color: var(--color-primary-dark);
+    color: var(--color-background);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 45px;
+    border: none;
+    border-radius: var(--border-radius-md);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    /* Increased margin-top */
+    margin-bottom: 10px;
+    /* Added margin-bottom */
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+
+.form-button:hover {
+    background-color: var(--color-primary-darker);
+}
+
+.form-button:active {
+    transform: scale(0.95);
+}
+
+.login {
+    left: 0;
+    z-index: 2;
+}
+
+.register {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* End Form Box Styles */
+
+
+/* Start Toggle/Overlay Styles */
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all var(--transition-duration) var(--transition-timing);
+    border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+    z-index: 100;
+}
+
+.toggle {
+    background: var(--color-primary-darker);
+    /* Darkest Green Overlay */
+    height: 100%;
+    color: var(--color-text-on-dark);
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.toggle-panel h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.toggle-panel p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+    max-width: 300px;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: 1px solid var(--color-text-on-dark);
+    color: var(--color-text-on-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 45px;
+    border-radius: var(--border-radius-md);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 80ms ease-in, background-color 0.2s ease, color 0.2s ease;
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.toggle-button:active {
+    transform: scale(0.95);
+}
+
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+/* End Toggle/Overlay Styles */
+
+
+/* Start Animation / Active State Styles */
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+
+.container.active .form-box.login {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+    /* Add pointer-events none when hidden */
+    pointer-events: none;
+}
+
+.container.active .form-box.register {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show var(--transition-duration);
+    /* Ensure pointer events are active */
+    pointer-events: auto;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* End Animation / Active State Styles */
+
+
+/* Start Responsive Styles */
+.mobile-toggle {
+    display: none;
+    /* Hidden by default on desktop */
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.mobile-toggle a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.mobile-toggle a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        min-height: auto;
+        /* Let content define height */
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+        /* Change back to block for stacking */
+    }
+
+    .toggle-container {
+        display: none;
+        /* Hide the sliding overlay */
+    }
+
+    .form-box {
+        width: 100%;
+        height: auto;
+        /* Auto height */
+        position: relative;
+        /* Back to normal flow */
+        left: auto;
+        top: auto;
+        padding: 50px 25px;
+        /* More vertical, less horizontal padding */
+        min-height: auto;
+        /* Remove min-height */
+        /* Reset desktop animation styles */
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: auto !important;
+        transition: none;
+    }
+
+    .form-box form {
+        height: auto;
+        /* Fit content */
+    }
+
+    /* Show only the currently relevant form */
+    .form-box.login {
+        display: flex;
+        /* Show login by default */
+    }
+
+    .form-box.register {
+        display: none;
+        /* Hide register by default */
+    }
+
+    /* Show mobile toggle links/buttons */
+    .mobile-toggle {
+        display: block;
+    }
+
+    .form-box h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-button {
+        width: 100%;
+        /* Make buttons full width on mobile */
+        padding: 12px;
+    }
+
+    /* JS will handle the display toggle */
+    .container.active .form-box.login {
+        display: none;
+    }
+
+    .container.active .form-box.register {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        padding: 40px 20px;
+    }
+
+    .form-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 12px 15px 12px 40px;
+        font-size: 0.85rem;
+    }
+
+    .input-group.select-group select {
+        padding: 12px 15px;
+    }
+
+    .form-button {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .mobile-toggle {
+        font-size: 0.85rem;
+    }
+}
+
+/* End Responsive Styles */

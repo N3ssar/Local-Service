@@ -20,6 +20,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-img">
+                <!-- Make sure the path is correct relative to your main page -->
                 <img src="assets/images/logo-removebg-preview.png" alt="Local Service Logo">
             </div>
             <div class="logo-text">
@@ -45,8 +46,9 @@
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <button class="sign-up">Sign Up</button>
-                <button class="log-in">Log in</button>
+                <!-- Links point to the new auth page with hashes -->
+                <a href="auth.html#register" class="auth-link"><button class="sign-up">Sign Up</button></a>
+                <a href="auth.html#login" class="auth-link"><button class="log-in">Log in</button></a>
             </div>
         </div>
     </header>
